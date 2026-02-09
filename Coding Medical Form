@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<!-- ________________ FILE INFO ________________ -->
+<!doctype html>
 <!--
-File: patient-form.html
-Author: Phat Le
-Class: MIS 3371
-Purpose: This is my first Assignment for 3371. This assignment consists of designing and coding a Medical Patient Registration Form through HTML and CSS
+    File: patient-form.html
+    Author: Phat Le
+    Date Created: 2026-02-01
+    Date Updated: 2026-02-09
+    Class: MIS 3371
+    Purpose: This is my first Assignment for 3371. This assignment consists of designing and coding a Medical Patient Registration Form through HTML and CSS
 -->
+<html lang="en">
+            <head>
+                <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-<title>Aegis Medical Registration</title>
+                <title>Aegis Medical Registration</title>
 
-<!-- Link to external stylesheet -->
-<link rel="stylesheet" href="style.css">
+            <!-- Link to external stylesheet -->
+            <link rel="stylesheet" href="style.css">
 
 <!-- Script to show today's date -->
 <script>
