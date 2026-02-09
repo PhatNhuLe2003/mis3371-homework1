@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ________________ FILE INFO ________________ -->
+<!--
+File: patient-form.html
+Author: Phat Le
+Class: MIS 3371
+Purpose: This is my first Assignment for 3371. This assignment consists of designing and coding a Medical Patient Registration Form through HTML and CSS
+-->
+
+<meta charset="UTF-8">
+<title>Aegis Medical Registration</title>
+
+<!-- Link to external stylesheet -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Script to show today's date -->
+<script>
+function showDate() {
+    const today = new Date();
+    document.getElementById("date").innerHTML =
+        today.toLocaleDateString("en-US", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+        });
+}
+</script>
+
+</head>
+
+<body onload="showDate()">
+
+<!-- ________________ PAGE HEADER ________________ -->
+<div id="header">
+    <h1>Aegis <span>Medical</span></h1>
+</div>
+
+<!-- ________________ START FORM ________________ -->
+<div id="container">
+<form action="thankyou.html">
+
+<table class="form">
+
+<!-- ________________ FORM TITLE ________________ -->
+<tr>
+    <th colspan="5">Registration Form</th>
+</tr>
+
+<!-- ________________ NAME SECTION ________________ -->
+<tr>
+    <td>First Name</td>
+    <td>M.I.</td>
+    <td colspan="3">Last Name</td>
+</tr>
+<tr>
+    <td><input type="text" maxlength="30"></td>
+    <td><input type="text" maxlength="1" class="mi"></td>
+    <td colspan="3"><input type="text" maxlength="30"></td>
+</tr>
+
+<!-- ________________ DOB / SSN ________________ -->
+<tr>
+    <td>Date of Birth</td>
+    <td colspan="4">Social Security Number</td>
+</tr>
+<tr>
+    <td><input type="text" placeholder="MM/DD/YYYY"></td>
+    <td colspan="4"><input type="password" placeholder="XXX-XX-XXXX"></td>
+</tr>
+
+<!-- ________________ ADDRESS ________________ -->
+<tr>
+    <td colspan="2">Address 1</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text"></td>
+    <td><input type="text"></td>
+    <td>
+        <select>
+            <option>Select</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+            <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+            <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+            <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+            <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+            <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+            <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+            <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+            <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+            <option>WI</option><option>WY</option>
+            <option>DC</option><option>PR</option>
+        </select>
+    </td>
+    <td><input type="text" maxlength="10"></td>
+</tr>
+
+<tr>
+    <td colspan="2">Address 2</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text"></td>
+    <td><input type="text"></td>
+    <td>
+        <select>
+            <option>Select</option>
+            <option>Select</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+            <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+            <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+            <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+            <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+            <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+            <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+            <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+            <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+            <option>WI</option><option>WY</option>
+            <option>DC</option><option>PR</option>
+        </select>
+    </td>
+    <td><input type="text" maxlength="10"></td>
+</tr>
+
+<!-- ________________ CONTACT INFO ________________ -->
+<tr>
+    <td colspan="5">Email</td>
+</tr>
+<tr>
+    <td colspan="5"><input type="email"></td>
+</tr>
+
+<tr>
+    <td colspan="2">Phone</td>
+    <td colspan="3">Work Phone</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="tel"></td>
+    <td colspan="3"><input type="tel"></td>
+</tr>
+
+<!-- ________________ ACCOUNT INFO ________________ -->
+<tr>
+    <td colspan="2">User ID</td>
+    <td colspan="3"></td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text" maxlength="20"></td>
+    <td colspan="3"></td>
+</tr>
+
+<tr>
+    <td colspan="2">Password</td>
+    <td colspan="3">Confirm Password</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="password"></td>
+    <td colspan="3"><input type="password"></td>
+</tr>
+
+<!-- ________________ RADIO BUTTONS ________________ -->
+<tr>
+    <td colspan="5">
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        Health Insurance?
+        <input type="radio" name="ins"> Yes
+        <input type="radio" name="ins"> No
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        Consent to release medical info?
+        <input type="radio" name="consent"> Yes
+        <input type="radio" name="consent"> No
+    </td>
+</tr>
+
+<!-- ________________ CHECKBOXES + TEXTAREA ________________ -->
+<tr>
+    <td colspan="3">
+        <strong>Medical History</strong><br>
+        <input type="checkbox"> Diabetes<br>
+        <input type="checkbox"> High Blood Pressure<br>
+        <input type="checkbox"> Heart Disease<br>
+        <input type="checkbox"> Asthma<br>
+        <input type="checkbox"> Arthritis
+    </td>
+
+    <td colspan="2">
+        <strong>Reason for Visit</strong><br>
+        <textarea rows="8" cols="40"></textarea>
+    </td>
+</tr>
+
+<!-- ________________ BUTTONS ________________ -->
+<tr>
+    <td colspan="5" align="right">
+        <input type="reset" value="Restart">
+        <input type="submit" value="Submit">
+    </td>
+</tr>
+
+</table>
+</form>
+</div>
+
+<!-- ________________ FOOTER ________________ -->
+<hr>
+
+<div id="footer">
+    Aegis Medical | PO Box 18881 | Sugar Land, TX 77496 | aegismedical@gmail.com
+</div>
+
+</body>
+</html>
