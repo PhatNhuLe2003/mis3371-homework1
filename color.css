@@ -1,18 +1,27 @@
 body
   {
     background-color: #D9DDC;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, serif;
     color: #000;
   }
 
-header1
+.aegis
   {  
-    color:#0b3c6d;
+    color: #0b3c6d;
   }
+.medical
+  {
+    color: #C8102E;
+  } 
+
+header1
+  {
+    color: #0b3c6d;
+  } 
 header2
   {
     color: #000;
-    text-align: center:
+    text-align: center;
   }
 
 #banner 
@@ -48,7 +57,7 @@ textarea,
 select
   {
     width:100%;
-    padding:6px
+    padding:6px;
     background-color:#7fa9dd;
     border: 1px solid #333;
   }
