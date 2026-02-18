@@ -1,0 +1,307 @@
+<!--
+Program name: patient-form.html
+Author: Phat Le
+Date created: 02/08/2026
+Date last edited: 02/09/2026
+Version: 1.1
+Description: Patient registration form for Aegis Medical. Captures demographic and medical information.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aegis Medical – Patient Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showDate() {
+            const d = new Date();
+            document.getElementById("today").innerHTML =
+                d.toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+        }
+    </script>
+</head>
+
+<body onload="showDate()">
+
+<!-- ================= BANNER ================= -->
+<div id="banner">
+    <img src="logo.png" alt="Aegis Medical Logo">
+    <div id="banner-text">
+        <h1>Aegis Medical</h1>
+        <p>Today is: <span id="today"></span></p>
+    </div>
+</div>
+
+<h2>Registration Form</h2>
+
+<!-- ================= FORM ================= -->
+<form action="thankyou.html">
+
+<table class="form-table">
+
+<!-- NAME -->
+<tr>
+    <td>First Name</td>
+    <td>M.I.</td>
+    <td colspan="3">Last Name</td>
+</tr>
+<tr>
+    <td><input type="text" maxlength="30"></td>
+    <td><input type="text" maxlength="1"></td>
+    <td colspan="3"><input type="text" maxlength="30"></td>
+</tr>
+
+<!-- DOB / SSN -->
+<tr>
+    <td colspan="2">Date of Birth (MM/DD/YYYY)</td>
+    <td colspan="3">Social Security Number</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text" placeholder="mm/dd/yyyy"></td>
+    <td colspan="3"><input type="text" placeholder="xxx-xx-xxxx"></td>
+</tr>
+
+<!-- ________________ ADDRESS ________________ -->
+<tr>
+    <td colspan="2">Address 1</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text" maxlength="30"></td>
+    <td><input type="text" maxlength="30"></td>
+    <td>
+        <select>
+            <option>Select</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+            <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+            <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+            <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+            <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+            <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+            <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+            <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+            <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+            <option>WI</option><option>WY</option>
+            <option>DC</option><option>PR</option>
+        </select>
+    </td>
+    <td><input type="text" maxlength="10"></td>
+</tr>
+
+<tr>
+    <td colspan="2">Address 2</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="text" maxlength="30"></td>
+    <td><input type="text" maxlength="30"></td>
+    <td>
+        <select>
+            <option>Select</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+            <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+            <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+            <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+            <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+            <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+            <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+            <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+            <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+            <option>WI</option><option>WY</option>
+            <option>DC</option><option>PR</option>
+        </select>
+    </td>
+    <td><input type="text" maxlength="10"></td>
+</tr>
+
+<!-- CONTACT -->
+<tr>
+    <td colspan="2">Email</td>
+    <td colspan="3">Phone Number</td>
+</tr>
+<tr>
+    <td colspan="2"><input type="email"></td>
+    <td colspan="3"><input type="text"></td>
+</tr>
+
+<!-- LOGIN -->
+<tr>
+    <td>User ID</td>
+    <td colspan="2">Password</td>
+    <td colspan="2">Confirm Password</td>
+</tr>
+<tr>
+    <td><input type="text" maxlength="20"></td>
+    <td colspan="2"><input type="password"></td>
+    <td colspan="2"><input type="password"></td>
+</tr>
+
+<!-- RADIOS -->
+<tr>
+    <td colspan="5">
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        Do you have health insurance?
+        <input type="radio" name="insurance"> Yes
+        <input type="radio" name="insurance"> No
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        Do you consent to the release of medical information?
+        <input type="radio" name="consent"> Yes
+        <input type="radio" name="consent"> No
+    </td>
+</tr>
+
+<!-- SLIDER -->
+<tr>
+    <td colspan="5">
+        On a scale of 1 (Poor) to 10 (Excellent), how is your health?<br><br>
+
+        <div style="width:25%;">
+            <span style="float:left;">1</span>
+            <span style="float:right;">10</span>
+            <input type="range" min="1" max="10" style="width:100%;">
+        </div>
+    </td>
+</tr>
+
+<!-- MEDICAL -->
+<tr>
+    <td colspan="2">
+        <strong>Medical History</strong><br>
+        <input type="checkbox"> Diabetes<br>
+        <input type="checkbox"> High Blood Pressure<br>
+        <input type="checkbox"> Heart Disease<br>
+        <input type="checkbox"> Asthma<br>
+        <input type="checkbox"> Arthritis
+    </td>
+
+    <td colspan="3">
+        <strong>Reason for Visit</strong><br>
+        <textarea rows="6" cols="50"></textarea>
+    </td>
+</tr>
+
+<!-- BUTTONS -->
+<tr>
+    <td colspan="5" class="buttons">
+        <input type="reset" value="Restart">
+        <input type="submit" value="Submit →">
+    </td>
+</tr>
+
+</table>
+</form>
+
+<!-- -------- FOOTER --------- -->
+<div id="footer">
+    Aegis Medical | PO Box 18881 | Sugar Land, TX 77496<br>
+    <button>Contact Us</button>
+</div>
+
+<!-- End of patient-form.html -->
+</body>
+
+
+</html>
+<!-- ---------- css ---------- -->
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+h1 {
+    color: #0b3c6d;
+}
+
+h2 {
+    color: #000;
+    text-align: center;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 3px solid #0b3c6d;
+}
+
+#banner img {
+    height: 70px;
+    margin-right: 20px;
+}
+
+.form-table {
+    width: 90%;
+    margin: auto;
+    border-spacing: 10px;
+}
+
+.form-table td {
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 6px;
+    background-color: #7fa9dd;
+    border: 1px solid #333;
+}
+
+textarea {
+    resize: none;
+}
+
+.buttons {
+    text-align: right;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    padding: 6px 14px;
+    background-color: #7a8793;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#footer {
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
