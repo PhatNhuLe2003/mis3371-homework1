@@ -60,6 +60,7 @@ select
     padding:6px;
     background-color:#7fa9dd;
     border: 1px solid #333;
+    box-sizing: border-box;
   }
 
 textarea
@@ -83,6 +84,13 @@ button
     cursor: pointer;
   }
 
+.form-table
+  {
+    width:90%
+    margin: auto;
+    border-spacing: 10px:
+    table-layout: fixed;
+  } 
 #footer
   {
     margin-top: 30px;
