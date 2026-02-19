@@ -40,9 +40,11 @@ h2
 
 .form-table
   {
-    width: 90%;
-    margin: auto;
+    width: 70%;
+    margin-left: 20px;
+    margin-right: auto;
     border-collapse: collapse;
+    table-layout: fixed;
   }
 
 .form-table td
