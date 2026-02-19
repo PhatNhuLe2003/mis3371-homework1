@@ -14,14 +14,14 @@ body
     color: #C8102E;
   } 
 
-header1
+h1
   {
     color: #0b3c6d;
   } 
-header2
+h2
   {
     color: #000;
-    text-align: center;
+    text-align: left;
   }
 
 #banner 
@@ -42,22 +42,23 @@ header2
   {
     width: 90%;
     margin: auto;
-    border-spacing:3px;
+    border-collapse: collapse;
   }
 
 .form-table td
   {
     vertical-align: top;
+    padding: 2px 4px;
   }
 
 input[type="text"],
 input[type="email"],    
-input[type="password],
+input[type="password"],
 textarea,
 select
   {
     width:100%;
-    padding:6px;
+    padding:4px;
     background-color:#7fa9dd;
     border: 1px solid #333;
     box-sizing: border-box;
@@ -68,13 +69,13 @@ textarea
     resize: none;
   }
 
-.button
+.buttons
   {
     text-align: right;
   }
 
 input[type="submit"],
-input[type="restart"],
+input[type="reset"],
 button
   {
     padding: 6px 14px;
