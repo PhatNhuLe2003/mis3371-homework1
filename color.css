@@ -24,6 +24,12 @@ h2
     text-align: left;
   }
 
+.required
+{
+  color: red;
+  font-weight: bold;
+}
+
 #banner 
   {
     display: flex;
