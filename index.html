@@ -15,16 +15,32 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <link rel="stylesheet" href="color.css">
 
     <script>
-        function showDate() {
+        function showDate()     
+        {
             const d = new Date();
             document.getElementById("today").innerHTML =
-                d.toLocaleDateString('en-US', {
+                d.toLocaleDateString('en-US', 
+                {
                     weekday: 'long',
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric'
-                });
+                }
+            );
         }
+        function validatePassword()     
+            {
+                const pw = document.querySelector('input[name="password"]').value;
+                const cpw = document.querySelector('input[name="confirm_password"]').value;
+
+                        if (pw !== cpw) 
+                        {
+                          alert("Passwords do not match.");
+                          return false;
+                        }
+                return true;
+  }
+        
     </script>
 </head>
 
@@ -45,7 +61,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 <h2>Registration Form</h2>
 
 <!-- ================= FORM ================= -->
-<form action="thankyou.html">
+<form action="thankyou.html" onsubmit="return validatePassword()">
 
 <table class="form-table">
 
