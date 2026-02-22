@@ -51,9 +51,9 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <!-- NAME -->
 <tr>
-    <td colspan="2">First Name</td>
+    <td colspan="2">First Name <span class="required">*</span></td>
     <td>M.I.</td>
-    <td colspan="3">Last Name</td>
+    <td colspan="3">Last Name <span class="required">*</span></td>
 </tr>
 <tr>
     <td colspan="2"><input type="text" name="first_name" maxlength="30" required></td>
@@ -63,8 +63,8 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <!-- DOB / SSN -->
 <tr>
-    <td colspan="3">Date of Birth (MM/DD/YYYY)</td>
-    <td colspan="3">Social Security Number</td>
+    <td colspan="3">Date of Birth (MM/DD/YYYY) <span class="required">*</span></td>
+    <td colspan="3">Social Security Number <span class="required">*</span></td>
 </tr>
 <tr>
     <td colspan="3"><input type="text" name="dob" placeholder="MM/DD/YYYY" required></td>
@@ -75,10 +75,10 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <!-- ================= ADDRESS ================= -->
 <tr>
-    <td colspan="3">Address 1</td>
-    <td>City</td>
-    <td>State</td>
-    <td>Zip</td>
+    <td colspan="3">Address 1 <span class="required">*</span></td>
+    <td>City <span class="required">*</span></td>
+    <td>State <span class="required">*</span></td>
+    <td>Zip <span class="required">*</span></td>
 </tr>
 <tr>
     <td colspan="3"><input type="text" name="address1" maxlength="30" required></td>
@@ -141,8 +141,8 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <!-- CONTACT -->
 <tr>
-    <td colspan="2">Email</td>
-    <td colspan="3">Phone Number</td>
+    <td colspan="2">Email <span class="required">*</span></td>
+    <td colspan="3">Phone Number <span class="required">*</span></td>
 </tr>
 <tr>
     <td colspan="2"><input type="email" name="email" required></td>
@@ -154,9 +154,9 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <!-- LOGIN -->
 <tr>
-    <td>User ID</td>
-    <td colspan="2">Password</td>
-    <td colspan="2">Confirm Password</td>
+    <td>User ID <span class="required">*</span></td>
+    <td colspan="2">Password <span class="required">*</span></td>
+    <td colspan="2">Confirm Password <span class="required">*</span></td>
 </tr>
 <tr>
     <td><input type="text" name="user_id" maxlength="20" required></td>
@@ -167,7 +167,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 <!-- RADIOS -->
 <tr>
     <td colspan="6">
-        Gender:
+        Gender <span class="required">*</span>:
         <input type="radio" name="gender" value="Male" required> Male
         <input type="radio" name="gender" value="Female"> Female
         <input type="radio" name="gender" value="Other"> Other
@@ -176,7 +176,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <tr>
     <td colspan="6">
-        Do you have health insurance?
+        Do you have health insurance? <span class="required">*</span>
         <input type="radio" name="insurance" value="Yes" required> Yes
         <input type="radio" name="insurance" value="No"> No
     </td>
@@ -184,7 +184,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
 <tr>
     <td colspan="6">
-        Do you consent to the release of medical information?
+        Do you consent to the release of medical information? <span class="required">*</span>
         <input type="radio" name="consent" value="Yes" required> Yes
         <input type="radio" name="consent" value="No"> No
     </td>
@@ -193,7 +193,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 <!-- SLIDER -->
 <tr>
     <td colspan="6">
-        On a scale of 1 (None) to 10 (Extremely), how much pain are you feeling currently?<br><br>
+        On a scale of 1 (None) to 10 (Extremely), how much pain are you feeling currently? <span class="required">*</span><br><br>
 
         <div style="width:25%;">
             <span style="float:left;">1</span>
@@ -215,7 +215,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     </td>
 
     <td colspan="3" class="reason-cell">
-        <strong>Reason for Visit</strong><br>
+        <strong>Reason for Visit <span class="required">*</span></strong><br>
         <textarea class="fixed-textarea" name="reason_for_visit" required></textarea>
     </td>
 </tr>
