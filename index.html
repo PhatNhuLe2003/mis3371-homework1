@@ -56,9 +56,9 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td colspan="3">Last Name</td>
 </tr>
 <tr>
-    <td colspan="2"><input type="text" maxlength="30"></td>
+    <td colspan="2"><input type="text" name="first_name" maxlength="30" required></td>
     <td><input type="text" maxlength="1" class="mi-box"></td>
-    <td colspan="3"><input type="text" maxlength="30"></td>
+    <td colspan="3"><input type="text" name="last_name" maxlength="30" required></td>
 </tr>
 
 <!-- DOB / SSN -->
@@ -67,11 +67,13 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td colspan="3">Social Security Number</td>
 </tr>
 <tr>
-    <td colspan="3"><input type="text" placeholder="mm/dd/yyyy"></td>
-    <td colspan="3"><input type="text" placeholder="xxx-xx-xxxx"></td>
+    <td colspan="3"><input type="text" name="dob" placeholder="MM/DD/YYYY" required></td>
+    <td colspan="3"><input type="text" name="ssn" placeholder="xxx-xx-xxxx" 
+                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}"
+                            title="Format: 123-45-6789" required></td>
 </tr>
 
-<!-- ________________ ADDRESS ________________ -->
+<!-- ================= ADDRESS ================= -->
 <tr>
     <td colspan="3">Address 1</td>
     <td>City</td>
@@ -79,11 +81,11 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td>Zip</td>
 </tr>
 <tr>
-    <td colspan="3"><input type="text" maxlength="30"></td>
-    <td><input type="text" maxlength="30"></td>
+    <td colspan="3"><input type="text" name="address1" maxlength="30" required></td>
+    <td><input type="text" name="city1" maxlength="30" required></td>
     <td>
-        <select>
-            <option>Select</option>
+        <select name="state1" required>
+            <option value="" selected disabled>Select</option>
             <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
             <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
             <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
@@ -100,7 +102,10 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
             <option>DC</option><option>PR</option>
         </select>
     </td>
-    <td><input type="text" maxlength="10"></td>
+    <td><input type="text" name="zip1" maxlength="10"
+                pattern="[0-9]{5}(-[0-9]{4})?"
+                title="Enter 5-digit ZIP or ZIP+4"
+                required></td>
 </tr>
 
 <tr>
@@ -140,8 +145,11 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td colspan="3">Phone Number</td>
 </tr>
 <tr>
-    <td colspan="2"><input type="email"></td>
-    <td colspan="3"><input type="text"></td>
+    <td colspan="2"><input type="email" name="email" required></td>
+    <td colspan="3"><input type="tel" name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            title="Format: 123-456-7890"
+                            required></td>
 </tr>
 
 <!-- LOGIN -->
@@ -151,34 +159,34 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td colspan="2">Confirm Password</td>
 </tr>
 <tr>
-    <td><input type="text" maxlength="20"></td>
-    <td colspan="2"><input type="password"></td>
-    <td colspan="2"><input type="password"></td>
+    <td><input type="text" name="user_id" maxlength="20" required></td>
+    <td colspan="2"><input type="password" name="password" required></td>
+    <td colspan="2"><input type="password" name="confirm_password" required></td>
 </tr>
 
 <!-- RADIOS -->
 <tr>
     <td colspan="6">
         Gender:
-        <input type="radio" name="gender"> Male
-        <input type="radio" name="gender"> Female
-        <input type="radio" name="gender"> Other
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
     </td>
 </tr>
 
 <tr>
     <td colspan="6">
         Do you have health insurance?
-        <input type="radio" name="insurance"> Yes
-        <input type="radio" name="insurance"> No
+        <input type="radio" name="insurance" value="Yes" required> Yes
+        <input type="radio" name="insurance" value="No"> No
     </td>
 </tr>
 
 <tr>
     <td colspan="6">
         Do you consent to the release of medical information?
-        <input type="radio" name="consent"> Yes
-        <input type="radio" name="consent"> No
+        <input type="radio" name="consent" value="Yes" required> Yes
+        <input type="radio" name="consent" value="No"> No
     </td>
 </tr>
 
@@ -190,7 +198,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
         <div style="width:25%;">
             <span style="float:left;">1</span>
             <span style="float:right;">10</span>
-            <input type="range" min="1" max="10" style="width:100%;">
+            <input type="range" name="pain_scale" min="1" max="10" style="width:100%;" required>
         </div>
     </td>
 </tr>
@@ -208,7 +216,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 
     <td colspan="3" class="reason-cell">
         <strong>Reason for Visit</strong><br>
-        <textarea class="fixed-textarea"></textarea>
+        <textarea class="fixed-textarea" name="reason_for_visit" required></textarea>
     </td>
 </tr>
 
@@ -223,7 +231,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 </table>
 </form>
 
-<!-- -------- FOOTER --------- -->
+<!-- ================= FOOTER ================= -->
 <div id="footer">
     Aegis Medical | PO Box 18881 | Sugar Land, TX 77496<br>
     <button>Contact Us</button>
