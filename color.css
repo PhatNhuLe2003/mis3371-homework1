@@ -80,7 +80,8 @@ textarea
 
 .buttons
   {
-    text-align: right;
+    text-align: left;
+    padding-left: 0;
   }
 
 input[type="submit"],
@@ -92,6 +93,27 @@ button
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 6px;
+  }
+input[type="submit"]
+  {
+    background-color: #28A745;
+  }
+input[type="submit"]:hover
+  {
+    background-color: #218838;
+  }
+input[type="reset"]
+ {
+   background-color: #DC3545;
+ }
+input[type="reset"]:hover
+  {
+    background-color: #C82333;
+  }
+input[type="reset"]
+  {
+    margin-right: 10px;
   }
 
 .fixed-textarea
