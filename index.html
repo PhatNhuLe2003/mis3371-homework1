@@ -38,9 +38,34 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
                           alert("Passwords do not match.");
                           return false;
                         }
-                return true;
+                        return true;
   }
-        
+     function formatDOB()
+     {
+         const dobInput = document.getElementById("dob");
+         if (!dobInput.value) return true;
+
+         const parts = dobInput.value.split("-");
+         if (parts.length !==3)
+         {
+             alert("Please enter Date of Birth in MM/DD/YYYY format.");
+             return false;
+         }
+
+         const yyyy = parts[0];
+         const mm = parts[1];
+         const dd = parts[2];
+
+         dobInput.type = "text";
+         dobInput.value = `${mm}/${dd}/${yyyy}`;
+
+         return true;
+     }
+    function validateForm()
+        {
+            return validatePassword() && formatDOB();
+        }
+         
     </script>
 </head>
 
@@ -61,7 +86,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
 <h2>Registration Form</h2>
 
 <!-- ================= FORM ================= -->
-<form action="thankyou.html" onsubmit="return validatePassword()">
+<form action="thankyou.html" onsubmit="return validateForm()">
 
 <table class="form-table">
 
@@ -85,7 +110,7 @@ Description: This is my first assignment for MIS 3371, where I use HTML and CSS 
     <td colspan="3">Social Security Number <span class="required">*</span></td>
 </tr>
 <tr>
-    <td colspan="3"><input type="text" name="dob" placeholder="MM/DD/YYYY" required></td>
+    <td colspan="3"><input type="date" name="dob" id="dob" required></td>
     <td colspan="3"><input type="text" name="ssn" placeholder="xxx-xx-xxxx" 
                             pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}"
                             title="Format: 123-45-6789" required></td>
