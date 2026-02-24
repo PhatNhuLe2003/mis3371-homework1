@@ -143,6 +143,11 @@ input[type="reset"]
   color: #191970;
 }
 
+.mi-box
+{
+  width: 30px;
+}
+
 #footer
   {
     margin-top: 30px;
