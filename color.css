@@ -1,5 +1,5 @@
 /*
-Program name: patient-form.html
+Program name: color.css
 Author: Phat Le
 Date created: 02/08/2026
 Date last edited: 02/27/2026
@@ -147,6 +147,7 @@ input[type="reset"]
 input.mi-box
 {
   width: 30px;
+  text-align: center;
 }
 
 #footer
